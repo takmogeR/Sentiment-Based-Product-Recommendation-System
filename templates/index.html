@@ -1,0 +1,130 @@
+<html>
+<head>
+    <title>Flipkart Sentiment & Product Recommendation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            resize: none;
+        }
+        input[type="submit"] {
+            background: #2980b9;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 15px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: #1f6391;
+        }
+        h3 {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .positive {
+            color: green;
+            font-weight: bold;
+        }
+        .negative {
+            color: red;
+            font-weight: bold;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #2980b9;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        tr:hover {
+            background: #f1f1f1;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flipkart Sentiment Analysis & Product Recommendation</h1>
+    </header>
+
+    <div class="container">
+        <h2>Check Customer Review</h2>
+        <form action="/predict" method="post">
+            <label for="review">Enter Customer Review:</label><br>
+            <textarea id="review" name="review" rows="4" required></textarea><br><br>
+            <input type="submit" value="Predict Sentiment">
+        </form>
+
+        {% if prediction_text %}
+            <h3 class="{{ 'positive' if 'positive' in prediction_text else 'negative' }}">
+                {{ prediction_text }}
+            </h3>
+        {% endif %}
+
+        {% if table_html %}
+            <h3 style="text-align:center;">Recommended Products</h3>
+            {{ table_html | safe }}
+        {% endif %}
+    </div>
+
+    <footer>
+        &copy; 2025 Flipkart Sentiment Recommender | Built with Flask & ML
+    </footer>
+</body>
+</html>
+
