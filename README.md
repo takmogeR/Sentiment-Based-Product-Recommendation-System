@@ -1,11 +1,5 @@
 # Sentiment-Based Product Recommendation System
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Flask](https://img.shields.io/badge/Flask-1.1.2-orange)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-0.24-green)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-
 An intelligent AI-powered web application that analyzes customer reviews using **Natural Language Processing (NLP)** and **Machine Learning** to predict sentiment and recommend relevant products in real time.
 
 This project integrates sentiment analysis with product category detection to provide context-aware recommendations, making it suitable for real-world **e-commerce analytics platforms**.
@@ -58,19 +52,19 @@ Output: Positive sentiment + Only air coolers recommended
 
 ## System Architecture
 
-User Review
-↓
-Text Preprocessing
-↓
-TF-IDF Vectorization
-↓
-Naive Bayes Model
-↓
-Sentiment Prediction
-↓
-Keyword-Based Product Filtering
-↓
-Ranked Recommendations
+- User Review
+- ↓
+- Text Preprocessing
+- ↓
+- TF-IDF Vectorization
+- ↓
+- Naive Bayes Model
+- ↓
+- Sentiment Prediction
+- ↓
+- Keyword-Based Product Filtering
+- ↓
+- Ranked Recommendations
 
 
 ---
@@ -81,13 +75,15 @@ Ranked Recommendations
 
 pip install -r requirements.txt
 
-1. **Run Flask app**
+2. **Run Flask app**
 
 python app.py
 
-1. **Open in browser**
+3. **Open in browser**
 
 http://127.0.0.1:5000
+
+
 ---
 
 ## Machine Learning Pipeline
