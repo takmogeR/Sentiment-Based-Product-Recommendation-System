@@ -77,7 +77,7 @@ pip install -r requirements.txt
 
 2. **Run Flask app**
 
-python app.py
+python myapp.py
 
 3. **Open in browser**
 
@@ -87,32 +87,32 @@ http://127.0.0.1:5000
 ---
 
 ## Machine Learning Pipeline
-1.	Text cleaning & normalization
-2.	TF-IDF feature extraction
-3.	Train-test split
-4.	Naive Bayes classification
-5.	Evaluation using Accuracy, ROC-AUC, Confusion Matrix
-6.	Model saving using Joblib
+- 1.	Text cleaning & normalization
+- 2.	TF-IDF feature extraction
+- 3.	Train-test split
+- 4.	Naive Bayes classification
+- 5.	Evaluation using Accuracy, ROC-AUC, Confusion Matrix
+- 6.	Model saving using Joblib
    
 ---
 
 ## Dashboard & Visual Analytics
 The system automatically generates:
-•	Sentiment distribution chart
-•	ROC curve
-•	Confusion matrix
-•	Top keywords bar chart
-•	Executive performance dashboard
-All results are saved inside the Results/ folder.
+- •	Sentiment distribution chart
+- •	ROC curve
+- •	Confusion matrix
+- •	Top keywords bar chart
+- •	Executive performance dashboard
+- All results are saved inside the Results/ folder.
 
 ---
 
 ## Business Impact
 This system can be used by:
-•	E-commerce platforms
-•	Customer feedback analytics teams
-•	Marketing intelligence systems
-It improves recommendation relevance by combining sentiment + product context.
+- •	E-commerce platforms
+- •	Customer feedback analytics teams
+- •	Marketing intelligence systems
+- It improves recommendation relevance by combining sentiment + product context.
 
 ## Author
 Rajlaxmi Takmoge
